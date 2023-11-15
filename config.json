@@ -1,11 +1,6 @@
 {
-  "Item": "https://github.com/RegistryAlive/ha3213/raw/main/Item.Dat",
-  "Mark": "https://github.com/RegistryAlive/ha3213/raw/main/Mark.dat",
-  "Npc": "https://github.com/RegistryAlive/ha3213/raw/main/Npc.Dat",
   "Server": "https://github.com/RegistryAlive/ha3213/raw/main/SERVER.INI",
-  "SceneData": "https://github.com/RegistryAlive/ha3213/raw/main/SceneData.Dat",
-  "Skill": "https://github.com/RegistryAlive/ha3213/raw/main/Skill.dat",
-  "Talk": "https://github.com/RegistryAlive/ha3213/raw/main/Talk.dat",
   "aLogin": "https://github.com/RegistryAlive/ha3213/raw/main/aLogin.exe",
   "Menu": "https://cdn.discordapp.com/attachments/758103145208479795/1051957594975121538/menu.zip"
+  "Data": "https://github.com/RegistryAlive/ha3213/raw/main/data.zip",
 }
