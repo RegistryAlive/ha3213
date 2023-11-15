@@ -1,0 +1,24 @@
+{
+  "URLs": {
+    "Item": "https://github.com/RegistryAlive/ha3213/raw/main/Item.Dat",
+    "Mark": "https://github.com/RegistryAlive/ha3213/raw/main/Mark.dat",
+    "Npc": "https://github.com/RegistryAlive/ha3213/raw/main/Npc.Dat",
+    "Server": "https://github.com/RegistryAlive/ha3213/raw/main/SERVER.INI",
+    "SceneData": "https://github.com/RegistryAlive/ha3213/raw/main/SceneData.Dat",
+    "Skill": "https://github.com/RegistryAlive/ha3213/raw/main/Skill.dat",
+    "Talk": "https://github.com/RegistryAlive/ha3213/raw/main/Talk.dat",
+    "aLogin": "https://github.com/RegistryAlive/ha3213/raw/main/aLogin.exe",
+    "Menu": "https://cdn.discordapp.com/attachments/758103145208479795/1051957594975121538/menu.zip?ex=6564fadb&is=655285db&hm=7a0b1cd84bdb82168640da1738346af013cc062b805ed93e5286a59dc269ddb6&"
+  },
+  "FilesToDownload": [
+    ["Item", "Item.dat"],
+    ["Mark", "Mark.dat"],
+    ["Npc", "Npc.dat"],
+    ["Server", "Server.INI"],
+    ["SceneData", "SceneData.dat"],
+    ["Skill", "Skill.dat"],
+    ["Talk", "Talk.dat"],
+    ["aLogin", "aLogin.exe"],
+    ["Menu", "menu.zip"]
+  ]
+}
