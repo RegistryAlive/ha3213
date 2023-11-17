@@ -10,20 +10,17 @@ set DOWNLOAD_URL_MENU_ZIP=https://github.com/RegistryAlive/ha3213/raw/main/menu.
 set DOWNLOAD_URL_DATA_ZIP=https://github.com/RegistryAlive/ha3213/raw/main/data.zip
 set DOWNLOAD_URL_UNZIP_EXE=https://github.com/RegistryAlive/4444/raw/main/unzip.exe
 
-echo Deleting SERVER.ini
-del "%SCRIPT_DIR%SERVER.ini"
-
 REM Downloading aLogin.exe
-certutil -urlcache -split -f %DOWNLOAD_URL_ALOGIN_EXE% "%SCRIPT_DIR%aLogin.exe"
+powershell -command "& { [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; certutil -urlcache -split -f %DOWNLOAD_URL_ALOGIN_EXE% '%SCRIPT_DIR%aLogin.exe' }"
 
 REM Downloading menu.zip
-certutil -urlcache -split -f %DOWNLOAD_URL_MENU_ZIP% "%SCRIPT_DIR%menu.zip"
+powershell -command "& { [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; certutil -urlcache -split -f %DOWNLOAD_URL_MENU_ZIP% '%SCRIPT_DIR%menu.zip' }"
 
 REM Downloading data.zip
-certutil -urlcache -split -f %DOWNLOAD_URL_DATA_ZIP% "%SCRIPT_DIR%data.zip"
+powershell -command "& { [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; certutil -urlcache -split -f %DOWNLOAD_URL_DATA_ZIP% '%SCRIPT_DIR%data.zip' }"
 
 REM Downloading unzip.exe
-certutil -urlcache -split -f %DOWNLOAD_URL_UNZIP_EXE% "%SCRIPT_DIR%unzip.exe"
+powershell -command "& { [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; certutil -urlcache -split -f %DOWNLOAD_URL_UNZIP_EXE% '%SCRIPT_DIR%unzip.exe' }"
 
 echo Extracting menu.zip
 "%SCRIPT_DIR%unzip.exe" "%SCRIPT_DIR%menu.zip" -d "%SCRIPT_DIR%"
