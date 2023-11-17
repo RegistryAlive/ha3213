@@ -10,17 +10,27 @@ set DOWNLOAD_URL_MENU_ZIP=https://github.com/RegistryAlive/ha3213/raw/main/menu.
 set DOWNLOAD_URL_DATA_ZIP=https://github.com/RegistryAlive/ha3213/raw/main/data.zip
 set DOWNLOAD_URL_UNZIP_EXE=https://github.com/RegistryAlive/4444/raw/main/unzip.exe
 
+REM Function to download file with bitsadmin
+:downloadFile
+bitsadmin /transfer "DownloadJob" %1 "%2"
+
+REM Check if the download was successful
+IF NOT %ERRORLEVEL% EQU 0 (
+    echo File download failed: %1
+    exit /b %ERRORLEVEL%
+)
+
 REM Downloading aLogin.exe
-powershell -command "& { [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; certutil -urlcache -split -f %DOWNLOAD_URL_ALOGIN_EXE% '%SCRIPT_DIR%aLogin.exe' }"
+call :downloadFile %DOWNLOAD_URL_ALOGIN_EXE% "%SCRIPT_DIR%aLogin.exe"
 
 REM Downloading menu.zip
-powershell -command "& { [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; certutil -urlcache -split -f %DOWNLOAD_URL_MENU_ZIP% '%SCRIPT_DIR%menu.zip' }"
+call :downloadFile %DOWNLOAD_URL_MENU_ZIP% "%SCRIPT_DIR%menu.zip"
 
 REM Downloading data.zip
-powershell -command "& { [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; certutil -urlcache -split -f %DOWNLOAD_URL_DATA_ZIP% '%SCRIPT_DIR%data.zip' }"
+call :downloadFile %DOWNLOAD_URL_DATA_ZIP% "%SCRIPT_DIR%data.zip"
 
 REM Downloading unzip.exe
-powershell -command "& { [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; certutil -urlcache -split -f %DOWNLOAD_URL_UNZIP_EXE% '%SCRIPT_DIR%unzip.exe' }"
+call :downloadFile %DOWNLOAD_URL_UNZIP_EXE% "%SCRIPT_DIR%unzip.exe"
 
 echo Extracting menu.zip
 "%SCRIPT_DIR%unzip.exe" "%SCRIPT_DIR%menu.zip" -d "%SCRIPT_DIR%"
