@@ -1,5 +1,4 @@
 aLogin.exe: 6c8b2b709e218ec018db0870920712b3
-Checksum.py: 12c56883c6ca326698aa886cc2b3e33d
 Item.dat: 202ee7a37cbeab7e449a4c7d6904ade2
 Mark.dat: c022469eec1526cf81f96f4fd711be42
 Npc.Dat: 942ba6fa8c8f5d94eeede86c1d2057b5
