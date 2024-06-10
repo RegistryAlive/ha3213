@@ -1,0 +1,9 @@
+aLogin.exe: 6c8b2b709e218ec018db0870920712b3
+Checksum.py: 12c56883c6ca326698aa886cc2b3e33d
+Item.dat: 202ee7a37cbeab7e449a4c7d6904ade2
+Mark.dat: c022469eec1526cf81f96f4fd711be42
+Npc.Dat: 942ba6fa8c8f5d94eeede86c1d2057b5
+SceneData.Dat: fe4d1f30c6b94a8cb0ef428efa032122
+SERVER.INI: 20ee2b61d925244da82ac1b43adb39a4
+Skill.dat: a70a1517c7c591b9fa4f9b3f252cc5b3
+Talk.dat: f9c13891eb26e61165675ee465b770e6
