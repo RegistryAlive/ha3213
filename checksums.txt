@@ -1,8 +1,8 @@
-aLogin.exe: 6c8b2b709e218ec018db0870920712b3
-Item.dat: cd34d6f467922fc9bef15f339936ca42
+aLogin.exe: 90659064be08d6e68e3a57eeccc50f06
+Item.dat: 44a4c18c2e151d0485496afcb9d98bc0
 Mark.dat: c022469eec1526cf81f96f4fd711be42
-Npc.Dat: 942ba6fa8c8f5d94eeede86c1d2057b5
+Npc.Dat: 7848bacb28b284cfc895f9a7f32b6dea
 SceneData.Dat: fe4d1f30c6b94a8cb0ef428efa032122
 SERVER.INI: 20ee2b61d925244da82ac1b43adb39a4
-Skill.dat: a70a1517c7c591b9fa4f9b3f252cc5b3
+Skill.dat: 099c20aa4709245616b7a4746854a9e9
 Talk.dat: f9c13891eb26e61165675ee465b770e6
