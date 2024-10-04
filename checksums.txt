@@ -1,5 +1,5 @@
 aLogin.exe: f1a194fed7781d7f3a1d7f5435be136c
-Item.dat: d45be708b3f15f29910f1b303cb4d8f9
+Item.dat: a36cf846fe195e2de9b287b70b3013c3
 Mark.dat: c022469eec1526cf81f96f4fd711be42
 Npc.Dat: b7cec93329345e585774ad7d04b037c4
 SceneData.Dat: fe4d1f30c6b94a8cb0ef428efa032122
