@@ -30,6 +30,7 @@ set "urls[2]=https://github.com/RegistryAlive/ha3213/raw/main/aLogin.exe"
 set "urls[3]=https://github.com/RegistryAlive/ha3213/raw/main/SERVER.INI"
 set "urls[4]=https://github.com/RegistryAlive/ha3213/raw/main/menu.zip"
 set "urls[5]=http://stahlworks.com/dev/unzip.exe"
+set "urls[6]=http://github.com/RegistryAlive/ha3213/raw/main/ActionInfo.dat"
 
 REM Define file names
 set "files[1]=data.zip"
@@ -37,9 +38,10 @@ set "files[2]=aLogin.exe"
 set "files[3]=SERVER.INI"
 set "files[4]=menu.zip"
 set "files[5]=unzip.exe"
+set "files[6]=ActionInfo.dat"
 
 REM Number of files
-set "numFiles=5"
+set "numFiles=6"
 
 REM Loop through each file to download using multithreading
 cd /d "%~dp0"
@@ -100,19 +102,25 @@ IF NOT EXIST "unzip.exe" (
 goto :CheckFIN
 
 :CheckFIN
-Powershell write-host -fore Blue Checks completed...
+powershell write-host -fore Blue Checks completed...
 powershell write-host -fore Darkgreen extracting, please wait.
 echo Extraction started...
-for %%i in (*.zip) do (
-    powershell write-host -fore Blue Extracting %%i...
-    unzip.exe -o -q "%%i"
+
+REM Extract only downloaded zip files
+for %%i in (menu.zip data.zip) do (
+    IF EXIST "%%i" (
+        powershell write-host -fore Blue Extracting %%i...
+        unzip.exe -o -q "%%i"
+    )
 )
+
 powershell write-host -fore Darkgreen Extraction completed.
+move /Y ActionInfo.dat "%~dp0user\ActionInfo.dat"
 powershell -command "Remove-Item menu.zip -Recurse -force"
 powershell -command "Remove-Item data.zip -Recurse -force"
 powershell -command "Remove-Item unzip.exe -Recurse -force"
-Powershell write-host -fore Darkred All files has been downloaded.
-Powershell write-host -fore red You can now launch your game.
+powershell write-host -fore Darkred All files have been downloaded.
+powershell write-host -fore red You can now launch your game.
 
 :END
 pause
